@@ -347,5 +347,10 @@ body::after{
 
 
 
-/* Mantém a malha acima do fundo e abaixo de todo o conteúdo */
-body> :not(script):not(style){position:relative;z-index:1}
+
+
+/* Correção de camadas: malha somente no plano de fundo, nunca sobre fotos ou cards */
+html{background:#100d16}
+body{background-color:transparent!important;background-image:none!important;position:relative;isolation:isolate}
+body::after{z-index:-1!important}
+body> :not(script):not(style){position:static;z-index:auto}
