@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d16">
+  <meta name="description" content="JK Beauty Brows — design de sobrancelhas e design com henna. Realce sua beleza, valorize seu olhar.">
+  <meta property="og:title" content="JK Beauty Brows | Realce sua beleza">
+  <meta property="og:description" content="Design de sobrancelhas e design com henna. Conheça os procedimentos e agende seu horário.">
+  <title>JK Beauty Brows | Realce sua beleza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#100d16;--panel:#191421;--panel2:#21192d;--violet:#852DDB;--violet2:#a85cff;--silver:#c8c8d1;--muted:#aaa3b5;--white:#f8f6fb;--line:rgba(210,205,222,.16);--max:1160px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:"DM Sans",Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    button,a{-webkit-tap-highlight-color:transparent}
+    .container{width:min(var(--max),calc(100% - 44px));margin:auto}
+    .topline{height:3px;background:linear-gradient(90deg,#35105d,var(--violet),#d7d7df,var(--violet))}
+    header{position:sticky;top:0;z-index:10;background:rgba(16,13,22,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand-mark{width:43px;height:43px;border:1px solid rgba(200,200,209,.65);border-radius:13px;display:grid;place-items:center;color:#d9c2f4;font-family:"Playfair Display",serif;font-size:20px;box-shadow:inset 0 0 18px rgba(133,45,219,.2)}
+    .brand-name{font-size:12px;letter-spacing:.22em;font-weight:700;line-height:1.35}
+    .brand-name span{display:block;color:var(--silver);font-size:9px;letter-spacing:.34em;font-weight:500;margin-top:4px}
+    .nav-links{display:flex;align-items:center;gap:28px;color:#d0cbd6;font-size:13px}
+    .nav-links a:hover{color:#c99aff}
+    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid rgba(201,154,255,.55);background:linear-gradient(135deg,#7924c8,#9b42ef);color:white;padding:12px 19px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.04em;transition:transform .25s,box-shadow .25s}
+    .nav-cta:hover,.button:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(133,45,219,.25)}
+    .menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;border-radius:12px;padding:9px}
+    .hero{position:relative;overflow:hidden;padding:94px 0 88px;background:radial-gradient(ellipse at 78% 40%,rgba(112,34,181,.22),transparent 38%),linear-gradient(120deg,#100d16 0%,#171020 58%,#100d16 100%)}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(195,157,231,.13);border-radius:50%;right:-100px;top:-210px;box-shadow:0 0 0 34px rgba(195,157,231,.025),0 0 0 72px rgba(195,157,231,.02)}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:64px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#d1b1f1;text-transform:uppercase;letter-spacing:.22em;font-size:10px;font-weight:700}
+    .eyebrow:before{content:"";width:27px;height:1px;background:var(--violet2)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.serif{font-family:"Playfair Display",Georgia,serif;font-weight:500}
+    h1{font-size:clamp(44px,6vw,76px);line-height:1.08;letter-spacing:-.035em;margin:22px 0}
+    h1 em{font-style:normal;color:#b66cff}
+    .hero-copy{max-width:520px;color:#bcb5c7;font-size:15px;line-height:1.9}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+    .button.secondary{background:transparent;border-color:rgba(200,200,209,.38);color:#e2dfe7}
+    .micro{display:flex;align-items:center;gap:10px;color:#9f97aa;font-size:11px;margin-top:25px}
+    .micro i{width:5px;height:5px;border-radius:50%;background:#a85cff;box-shadow:0 0 12px #a85cff}
+    .hero-art{min-height:440px;position:relative;display:grid;place-items:center}
+    .art-frame{width:min(100%,390px);aspect-ratio:4/5;border:1px solid rgba(200,200,209,.35);border-radius:190px 190px 26px 26px;padding:12px;position:relative;background:linear-gradient(145deg,rgba(133,45,219,.28),rgba(255,255,255,.025) 45%,rgba(133,45,219,.12));box-shadow:0 25px 80px rgba(0,0,0,.35)}
+    .art-inner{height:100%;border-radius:180px 180px 18px 18px;overflow:hidden;position:relative;background:radial-gradient(ellipse at 50% 36%,rgba(165,92,255,.34),transparent 34%),linear-gradient(155deg,#2a183b,#17111f 55%,#0e0b13);display:flex;align-items:center;justify-content:center}
+    .art-inner:before,.art-inner:after{content:"";position:absolute;border:1px solid rgba(211,190,233,.22);border-radius:50%;width:250px;height:250px}
+    .art-inner:after{width:310px;height:310px}
+    .monogram{position:relative;z-index:1;text-align:center}
+    .monogram strong{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(100px,15vw,165px);letter-spacing:-.12em;color:#e3d7ef;text-shadow:0 8px 35px rgba(177,105,255,.3)}
+    .monogram span{display:block;color:#c5bdce;font-size:9px;letter-spacing:.42em;margin:8px 0 0 12px}
+    .floating{position:absolute;z-index:2;background:rgba(26,20,35,.9);border:1px solid rgba(200,200,209,.3);backdrop-filter:blur(12px);padding:13px 16px;border-radius:14px;color:#dcd5e5;font-size:11px;box-shadow:0 12px 35px rgba(0,0,0,.25)}
+    .floating.top{top:58px;right:-12px}.floating.bottom{bottom:58px;left:-25px}
+    .floating b{display:block;color:#c28aff;font-size:13px;margin-bottom:2px}
+    .section{padding:92px 0}
+    .section-head{text-align:center;max-width:650px;margin:0 auto 42px}
+    .section-head .eyebrow{justify-content:center}
+    h2{font-size:clamp(34px,4vw,49px);line-height:1.15;margin:15px 0}
+    .section-head p{color:var(--muted);font-size:14px;line-height:1.8}
+    .services{background:linear-gradient(180deg,#15101d,#100d16)}
+    .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .service-card{background:linear-gradient(145deg,rgba(37,27,50,.96),rgba(23,18,31,.98));border:1px solid var(--line);border-radius:22px;padding:30px;position:relative;overflow:hidden}
+    .service-card:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-100px;top:-105px;background:rgba(133,45,219,.13);filter:blur(4px)}
+    .service-number{font-family:"Playfair Display",serif;font-size:38px;color:rgba(198,156,239,.6);line-height:1}
+    .service-card h3{font-family:"Playfair Display",serif;font-weight:500;font-size:27px;margin:17px 0 10px}
+    .service-card p{color:#b8b0c1;font-size:13px;line-height:1.85}
+    .service-card h4{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#c99aff;margin:23px 0 12px}
+    .benefits{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;padding:0;margin:0 0 25px;list-style:none}
+    .benefits li{font-size:12px;color:#ded9e5;display:flex;gap:8px;align-items:flex-start}
+    .benefits li:before{content:"✦";color:#a85cff;font-size:11px;margin-top:1px}
+    .service-card .text-link{font-size:12px;color:#d0a6ff;font-weight:700;letter-spacing:.04em}
+    .choose{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+    .choose-copy p{color:var(--muted);font-size:14px;line-height:1.9}
+    .steps{display:grid;gap:13px}
+    .step{display:flex;gap:17px;align-items:flex-start;padding:18px 20px;background:var(--panel);border:1px solid var(--line);border-radius:15px}
+    .step-num{width:31px;height:31px;flex:0 0 31px;border-radius:50%;display:grid;place-items:center;color:#d9baff;border:1px solid rgba(168,92,255,.5);font-size:11px}
+    .step b{display:block;font-size:13px;margin-bottom:3px}.step span{display:block;color:var(--muted);font-size:12px;line-height:1.7}
+    .cta-band{padding:54px 0;background:linear-gradient(110deg,#351052,#542080 55%,#241332);border-top:1px solid rgba(220,200,240,.2);border-bottom:1px solid rgba(220,200,240,.2)}
+    .cta-content{display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .cta-content h2{font-size:clamp(29px,4vw,42px);margin:0 0 8px}.cta-content p{margin:0;color:#d4c5e1;font-size:13px}
+    .cta-content .button{background:#f3eef8;color:#261632;border-color:#f3eef8;white-space:nowrap}
+    .social{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .social-card{display:flex;align-items:center;gap:16px;padding:22px;border:1px solid var(--line);border-radius:17px;background:var(--panel);transition:border-color .2s,transform .2s}
+    .social-card:hover{border-color:rgba(168,92,255,.7);transform:translateY(-3px)}
+    .social-icon{width:44px;height:44px;border-radius:14px;background:rgba(133,45,219,.17);display:grid;place-items:center;color:#d2adf5;font-size:20px}
+    .social-card small{display:block;color:var(--muted);font-size:10px}.social-card b{font-size:13px}
+    footer{border-top:1px solid var(--line);padding:27px 0;color:#8e8798;font-size:10px;letter-spacing:.05em}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .silver{color:var(--silver)}
+    @media(max-width:800px){.nav-links{display:none;position:absolute;top:78px;left:0;right:0;padding:18px 22px 24px;background:#15101d;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:17px}.nav-links.open{display:flex}.nav-links a{padding:5px 0}.nav-cta{display:none}.menu-toggle{display:block}.hero{padding:66px 0 58px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero-art{min-height:360px}.art-frame{width:min(78%,340px)}.floating.top{right:0}.floating.bottom{left:0}.section{padding:70px 0}.choose{grid-template-columns:1fr;gap:25px}.cta-content{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.container{width:min(100% - 32px,var(--max))}.nav{height:70px}.brand-mark{width:39px;height:39px}.brand-name{font-size:11px}.nav-links{top:70px}.hero h1{font-size:47px}.hero-copy{font-size:14px}.hero-art{min-height:330px}.art-frame{width:78%}.floating{font-size:10px;padding:10px 12px}.floating.top{top:38px}.floating.bottom{bottom:40px}.service-grid,.social{grid-template-columns:1fr}.service-card{padding:24px}.benefits{grid-template-columns:1fr 1fr}.cta-band{padding:42px 0}.footer-inner{align-items:flex-start;flex-direction:column;gap:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="JK Beauty Brows — início">
+        <span class="brand-mark">JK</span>
+        <span class="brand-name">JK BEAUTY BROWS<span>DESIGN DE SOBRANCELHAS</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#inicio">Início</a><a href="#procedimentos">Procedimentos</a><a href="#experiencia">A experiência</a><a href="#contato">Contato</a>
+      </nav>
+      <a class="nav-cta" href="https://wa.me/5598985036546?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20JK%20Beauty%20Brows." target="_blank" rel="noopener">Agendar horário ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Beleza em cada detalhe</span>
+          <h1>Seu olhar.<br><em>Sua identidade.</em></h1>
+          <p class="hero-copy">Sobrancelhas bem cuidadas valorizam sua expressão e realçam aquilo que você tem de único. Descubra um cuidado pensado para harmonizar seu olhar com delicadeza e personalidade.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://wa.me/5598985036546?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20JK%20Beauty%20Brows." target="_blank" rel="noopener">Agendar pelo WhatsApp ↗</a>
+            <a class="button secondary" href="#procedimentos">Conhecer procedimentos</a>
+          </div>
+          <div class="micro"><i></i> Design de sobrancelhas • Henna</div>
+        </div>
+        <div class="hero-art" aria-label="Identidade visual JK Beauty Brows">
+          <div class="art-frame"><div class="art-inner"><div class="monogram"><strong>JK</strong><span>BEAUTY BROWS</span></div></div></div>
+          <div class="floating top"><b>Seu estilo</b>Valorizado em cada detalhe</div>
+          <div class="floating bottom"><b>Beleza com intenção</b>Realce sua expressão</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="procedimentos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Cuidado personalizado</span>
+          <h2>Conheça nossos <span class="silver">procedimentos</span></h2>
+          <p>Cada técnica tem uma proposta. Entenda o que é feito e descubra qual resultado combina com o que você deseja para suas sobrancelhas.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-number">01</div>
+            <h3>Design de Sobrancelhas</h3>
+            <p>Modelagem que considera o formato natural dos fios e a harmonia do rosto. O objetivo é organizar o desenho das sobrancelhas sem perder a sua personalidade.</p>
+            <h4>O que esse procedimento pode trazer</h4>
+            <ul class="benefits">
+              <li>Formato mais definido e alinhado</li>
+              <li>Valorização do olhar</li>
+              <li>Remoção dos pelos excedentes</li>
+              <li>Mais harmonia com os traços do rosto</li>
+            </ul>
+            <a class="text-link" href="https://wa.me/5598985036546?text=Ol%C3%A1%21%20Quero%20agendar%20Design%20de%20Sobrancelhas%20na%20JK%20Beauty%20Brows." target="_blank" rel="noopener">AGENDAR DESIGN ↗</a>
+          </article>
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Design com Henna</h3>
+            <p>Une a modelagem das sobrancelhas à aplicação de henna, criando um efeito de preenchimento e destacando o contorno para um visual mais marcado.</p>
+            <h4>O que esse procedimento pode trazer</h4>
+            <ul class="benefits">
+              <li>Aparência visualmente mais preenchida</li>
+              <li>Contorno mais destacado</li>
+              <li>Realce da expressão do olhar</li>
+              <li>Ajuda a disfarçar pequenas falhas</li>
+            </ul>
+            <a class="text-link" href="https://wa.me/5598985036546?text=Ol%C3%A1%21%20Quero%20agendar%20Design%20com%20Henna%20na%20JK%20Beauty%20Brows." target="_blank" rel="noopener">AGENDAR COM HENNA ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experiencia">
+      <div class="container choose">
+        <div class="choose-copy">
+          <span class="eyebrow">A escolha certa para você</span>
+          <h2>Um cuidado que respeita <span style="color:var(--violet2)">sua beleza</span></h2>
+          <p>Quer um resultado mais natural ou sobrancelhas com mais destaque? A escolha começa pelo efeito que você deseja. No atendimento, converse sobre seu estilo e suas expectativas para encontrar a melhor opção.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="step-num">01</div><div><b>Escolha seu procedimento</b><span>Conheça as diferenças entre o design tradicional e o design com henna.</span></div></div>
+          <div class="step"><div class="step-num">02</div><div><b>Converse pelo WhatsApp</b><span>Envie sua preferência e tire suas dúvidas diretamente com a profissional.</span></div></div>
+          <div class="step"><div class="step-num">03</div><div><b>Agende seu horário</b><span>Combine a disponibilidade e prepare-se para cuidar do seu olhar.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-content">
+        <div><h2>Seu próximo olhar começa aqui.</h2><p>Entre em contato e agende seu atendimento na JK Beauty Brows.</p></div>
+        <a class="button" href="https://wa.me/5598985036546?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20JK%20Beauty%20Brows%20e%20gostaria%20de%20agendar." target="_blank" rel="noopener">Falar no WhatsApp ↗</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Conecte-se</span>
+          <h2>Acompanhe a <span class="silver">JK Beauty Brows</span></h2>
+          <p>Veja novidades, acompanhe o trabalho e fale diretamente com a profissional.</p>
+        </div>
+        <div class="social">
+          <a class="social-card" href="https://www.instagram.com/jk_beautybrows/" target="_blank" rel="noopener"><span class="social-icon">◎</span><span><small>INSTAGRAM DO ESPAÇO</small><b>@jk_beautybrows</b></span></a>
+          <a class="social-card" href="https://www.instagram.com/jescasousa.r/" target="_blank" rel="noopener"><span class="social-icon">◎</span><span><small>PERFIL PROFISSIONAL</small><b>@jescasousa.r</b></span></a>
+          <a class="social-card" href="https://wa.me/5598985036546" target="_blank" rel="noopener"><span class="social-icon">✆</span><span><small>AGENDAMENTOS</small><b>(98) 98503-6546</b></span></a>
+          <a class="social-card" href="https://wa.me/5598985036546?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos." target="_blank" rel="noopener"><span class="social-icon">✧</span><span><small>FALE CONOSCO</small><b>Tire suas dúvidas</b></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner"><span>© <span id="year">2026</span> JK BEAUTY BROWS. Todos os direitos reservados.</span><span class="silver">BELEZA • ELEGÂNCIA • IDENTIDADE</span></div>
+  </footer>
+  <script>
+    const menuToggle=document.getElementById('menuToggle');
+    const navLinks=document.getElementById('navLinks');
+    menuToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');menuToggle.textContent=open?'✕':'☰';});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Abrir menu');menuToggle.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
