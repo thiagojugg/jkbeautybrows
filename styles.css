@@ -146,11 +146,11 @@ header{transition:background .35s ease,border-color .35s ease}
 
 /* Fotos dos procedimentos mais claras */
 .service-card{isolation:isolate;background:rgba(20,15,28,.16);text-shadow:0 2px 8px rgba(0,0,0,.85)}
-.service-card::before{content:"";position:absolute;inset:0;z-index:0;border-radius:inherit;background-size:cover;background-position:center;opacity:1;transform:scale(1.001);transition:transform .7s ease,opacity .45s ease}
+.service-card::before{content:"";position:absolute;inset:0;z-index:0;border-radius:inherit;background-size:cover;background-position:center;opacity:.85;transform:scale(1.001);transition:transform .7s ease,opacity .45s ease}
 .service-card:nth-child(1)::before{background-image:linear-gradient(90deg,rgba(16,13,22,.10) 0%,rgba(16,13,22,.04) 100%),url("./assets/IMG_3966.jpeg")}
 .service-card:nth-child(2)::before{background-image:linear-gradient(90deg,rgba(16,13,22,.10) 0%,rgba(16,13,22,.04) 100%),url("./assets/IMG_3967.jpeg")}
 .service-card>*{position:relative;z-index:1}
-.service-card:hover::before{transform:scale(1.045);opacity:1}
+.service-card:hover::before{transform:scale(1.045);opacity:.85}
 
 
 /* Cinematic motion: reveal suave durante a rolagem */
