@@ -275,11 +275,3 @@ header{transition:background .35s ease,border-color .35s ease}
   </script>
 </body>
 </html>
-
-/* Fotos de fundo dos dois cards — imagem em destaque, sem escurecimento pesado */
-.service-card{isolation:isolate;background:rgba(20,15,28,.12);text-shadow:0 2px 8px rgba(0,0,0,.9)}
-.service-card::before{content:"";position:absolute;inset:0;z-index:0;border-radius:inherit;background-size:cover;background-position:center;opacity:1;transform:scale(1.001);transition:transform .7s ease,opacity .45s ease}
-.service-card:nth-child(1)::before{background-image:url("./assets/IMG_3966.jpeg")}
-.service-card:nth-child(2)::before{background-image:url("./assets/IMG_3967.jpeg")}
-.service-card>*{position:relative;z-index:1}
-.service-card:hover::before{transform:scale(1.045);opacity:1}
