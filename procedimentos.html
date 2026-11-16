@@ -24,4 +24,15 @@ header{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
   targets.forEach(el=>observer.observe(el));
 })();
 </script>
+<script id="global-wave-parallax">
+(function(){
+  const root=document.documentElement;
+  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  let queued=false;
+  const update=()=>{root.style.setProperty("--wave-scroll",window.scrollY+"px");queued=false;};
+  update();
+  window.addEventListener("scroll",()=>{if(!queued){queued=true;requestAnimationFrame(update);}},{passive:true});
+  window.addEventListener("pageshow",update);
+})();
+</script>
 </body></html>
