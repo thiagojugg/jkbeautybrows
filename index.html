@@ -33,7 +33,7 @@
     .menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;border-radius:12px;padding:9px}
     .hero{position:relative;overflow:hidden;padding:94px 0 88px;background:radial-gradient(ellipse at 78% 40%,rgba(112,34,181,.22),transparent 38%),linear-gradient(120deg,#100d16 0%,#171020 58%,#100d16 100%)}
     .hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(195,157,231,.13);border-radius:50%;right:-100px;top:-210px;box-shadow:0 0 0 34px rgba(195,157,231,.025),0 0 0 72px rgba(195,157,231,.02)}
-    .hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:64px}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1fr;align-items:center;gap:34px}
     .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#d1b1f1;text-transform:uppercase;letter-spacing:.22em;font-size:10px;font-weight:700}
     .eyebrow:before{content:"";width:27px;height:1px;background:var(--violet2)}
     h1,h2,h3,p{margin-top:0}
@@ -57,8 +57,8 @@
     .floating.top{top:58px;right:-12px}.floating.bottom{bottom:58px;left:-25px}
     .floating b{display:block;color:#c28aff;font-size:13px;margin-bottom:2px}
     .hero-photo-wrap{min-height:0;position:relative;display:flex;align-items:center;justify-content:center}
-    .hero-photo-frame{width:100%;max-width:560px;height:auto;position:relative;overflow:visible;border:0;border-radius:0;padding:0;background:none;box-shadow:none}
-    .hero-photo{display:block;width:100%;height:auto;max-height:680px;object-fit:contain;object-position:center;border:0;border-radius:18px;background:none}
+    .hero-photo-frame{width:100%;max-width:900px;height:auto;position:relative;overflow:visible;border:0;border-radius:0;padding:0;background:none;box-shadow:none}
+    .hero-photo{display:block;width:100%;height:auto;max-height:720px;object-fit:contain;object-position:center;border:0;border-radius:18px;background:none}
     @media(max-width:800px){.hero-photo-wrap{min-height:0}.hero-photo-frame{width:100%;max-width:560px}.hero-photo{max-height:none}}
     @media(max-width:560px){.hero-photo-wrap{min-height:0}.hero-photo-frame{width:100%}.hero-photo{border-radius:14px}}
     .section{padding:92px 0}
@@ -120,6 +120,11 @@
   <main>
     <section class="hero" id="inicio">
       <div class="container hero-grid">
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-frame">
+            <img class="hero-photo" src="assets/Retrato Glamour Roxo Neon.png" alt="JK Beauty Brows — atendimento e design de sobrancelhas">
+          </div>
+        </div>
         <div>
           <span class="eyebrow">Beleza em cada detalhe</span>
           <h1>Seu olhar.<br><em>Sua identidade.</em></h1>
@@ -129,11 +134,6 @@
             <a class="button secondary" href="#procedimentos">Conhecer procedimentos</a>
           </div>
           <div class="micro"><i></i> Design de sobrancelhas • Henna</div>
-        </div>
-        <div class="hero-photo-wrap">
-          <div class="hero-photo-frame">
-            <img class="hero-photo" src="assets/Retrato Glamour Roxo Neon.png" alt="JK Beauty Brows — atendimento e design de sobrancelhas">
-          </div>
         </div>
       </div>
     </section>
