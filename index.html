@@ -99,6 +99,15 @@
     @media(max-width:800px){.nav-links{display:none;position:absolute;top:78px;left:0;right:0;padding:18px 22px 24px;background:#15101d;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:17px}.nav-links.open{display:flex}.nav-links a{padding:5px 0}.nav-cta{display:none}.menu-toggle{display:block}.hero{padding:66px 0 58px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero-art{min-height:360px}.art-frame{width:min(78%,340px)}.floating.top{right:0}.floating.bottom{left:0}.section{padding:70px 0}.choose{grid-template-columns:1fr;gap:25px}.cta-content{align-items:flex-start;flex-direction:column}}
     @media(max-width:560px){.container{width:min(100% - 32px,var(--max))}.nav{height:70px}.brand-mark{width:39px;height:39px}.brand-name{font-size:11px}.nav-links{top:70px}.hero h1{font-size:47px}.hero-copy{font-size:14px}.hero-art{min-height:330px}.art-frame{width:78%}.floating{font-size:10px;padding:10px 12px}.floating.top{top:38px}.floating.bottom{bottom:40px}.service-grid,.social{grid-template-columns:1fr}.service-card{padding:24px}.benefits{grid-template-columns:1fr 1fr}.cta-band{padding:42px 0}.footer-inner{align-items:flex-start;flex-direction:column;gap:8px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+    @media(max-width:800px){
+      .nav{height:auto;min-height:70px;flex-wrap:wrap;row-gap:0;padding-top:10px}
+      .nav-links{display:flex!important;position:static;order:3;flex:0 0 100%;width:100%;padding:10px 0 12px;margin:0;background:transparent;border:0;border-bottom:0;flex-direction:row;align-items:center;justify-content:space-between;gap:20px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+      .nav-links::-webkit-scrollbar{display:none}
+      .nav-links a{padding:4px 0;flex:0 0 auto;font-size:11px}
+      .menu-toggle{display:none!important}
+      .nav-cta{display:none!important}
+    }
   </style>
 </head>
 <body>
@@ -110,7 +119,7 @@
         <span class="brand-name">JK BEAUTY BROWS<span>DESIGN DE SOBRANCELHAS</span></span>
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
-        <a href="#inicio">Início</a><a href="procedimentos.html">Procedimentos</a><a href="experiencia.html">A experiência</a><a href="contato.html">Contato</a>
+        <a href="index.html">Início</a><a href="procedimentos.html">Procedimentos</a><a href="experiencia.html">A experiência</a><a href="contato.html">Contato</a>
       </nav>
       <a class="nav-cta" href="agendamento.html">Agendar horário ↗</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
