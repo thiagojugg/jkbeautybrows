@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+  <script>
+    // Ao abrir ou recarregar a página inicial, sempre começar pelo banner.
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    if (window.location.hash) history.replaceState(null, "", window.location.pathname + window.location.search);
+    window.addEventListener("pageshow", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#100d16">
