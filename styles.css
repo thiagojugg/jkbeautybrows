@@ -151,3 +151,15 @@ header{transition:background .35s ease,border-color .35s ease}
 .service-card:nth-child(2)::before{background-image:linear-gradient(90deg,rgba(16,13,22,.10) 0%,rgba(16,13,22,.04) 100%),url("./assets/IMG_3967.jpeg")}
 .service-card>*{position:relative;z-index:1}
 .service-card:hover::before{transform:scale(1.045);opacity:1}
+
+
+/* Cinematic motion: reveal suave durante a rolagem */
+.cinema-reveal{opacity:1;transform:none}
+.cinema-motion .cinema-reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+.cinema-motion .cinema-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+.cinema-motion .cinema-reveal.cinema-scale{transform:translate3d(0,22px,0) scale(.985)}
+.cinema-motion .cinema-reveal.cinema-scale.is-visible{transform:translate3d(0,0,0) scale(1)}
+body{background-image:radial-gradient(ellipse at 12% 18%,rgba(128,53,190,.12),transparent 34%),radial-gradient(ellipse at 88% 58%,rgba(157,83,222,.09),transparent 32%);background-attachment:fixed}
+.topline{height:2px;background:linear-gradient(90deg,#5b1a91,#d6a7ff,#7a2bc0,#5b1a91);background-size:240% 100%;animation:cinemaShimmer 6s linear infinite}
+header{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+@media(prefers-reduced-motion:reduce){.cinema-motion .cinema-reveal,.cinema-motion .cinema-reveal.is-visible{opacity:1;transform:none;transition:none;will-change:auto}.topline{animation:none}}
