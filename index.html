@@ -106,6 +106,37 @@
     @media(max-width:560px){.container{width:min(100% - 32px,var(--max))}.nav{height:70px}.brand-mark{width:48px;height:48px}.brand-name{font-size:11px}.nav-links{top:70px}.hero h1{font-size:47px}.hero-copy{font-size:14px}.hero-art{min-height:330px}.art-frame{width:78%}.floating{font-size:10px;padding:10px 12px}.floating.top{top:38px}.floating.bottom{bottom:40px}.service-grid,.social{grid-template-columns:1fr}.service-card{padding:24px}.benefits{grid-template-columns:1fr 1fr}.cta-band{padding:42px 0}.footer-inner{align-items:flex-start;flex-direction:column;gap:8px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
+  
+
+/* EXPERIENCIA CINEMATOGRÁFICA — luz ambiente, profundidade e microinterações */
+body{position:relative;isolation:isolate}
+body::before{content:"";position:fixed;z-index:-1;inset:-25%;pointer-events:none;background:radial-gradient(ellipse at 18% 24%,rgba(132,45,219,.13),transparent 34%),radial-gradient(ellipse at 82% 68%,rgba(168,92,255,.10),transparent 32%);animation:cinemaAmbient 16s ease-in-out infinite alternate}
+@keyframes cinemaAmbient{0%{transform:translate3d(-1.5%,0,0) scale(1);opacity:.65}100%{transform:translate3d(1.5%,-1%,0) scale(1.06);opacity:1}}
+.topline{background-size:220% 100%;animation:cinemaShimmer 7s linear infinite}
+@keyframes cinemaShimmer{0%{background-position:100% 0}100%{background-position:-120% 0}}
+header{transition:background .35s ease,border-color .35s ease}
+.hero:before,.page-hero:before{animation:cinemaFloat 13s ease-in-out infinite alternate}
+@keyframes cinemaFloat{from{transform:translate3d(0,0,0) rotate(0deg)}to{transform:translate3d(-22px,18px,0) rotate(7deg)}}
+.service-card,.page-card,.content-panel,.step,.social-card,.contact-item,.location-panel{position:relative;isolation:isolate;transition:transform .45s cubic-bezier(.2,.75,.25,1),border-color .35s ease,box-shadow .4s ease,background .4s ease}
+.service-card:hover,.page-card:hover,.content-panel:hover,.step:hover,.social-card:hover,.contact-item:hover,.location-panel:hover{transform:translateY(-6px);border-color:rgba(184,112,255,.62);box-shadow:0 18px 48px rgba(0,0,0,.28),0 0 28px rgba(133,45,219,.12)}
+.service-card{background:linear-gradient(145deg,rgba(37,27,50,.84),rgba(23,18,31,.88))}
+.service-card::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background-size:cover;background-position:center;opacity:.24;transition:transform .7s ease,opacity .5s ease}
+.service-card:nth-child(1)::before{background-image:linear-gradient(120deg,rgba(16,13,22,.78),rgba(16,13,22,.55)),url("assets/IMG_3966.jpeg")}
+.service-card:nth-child(2)::before{background-image:linear-gradient(120deg,rgba(16,13,22,.78),rgba(16,13,22,.55)),url("assets/IMG_3967.jpeg")}
+.service-card:hover::before{transform:scale(1.055);opacity:.34}
+.page-card::before{transition:transform .75s cubic-bezier(.2,.75,.25,1),opacity .4s ease}
+.page-card:hover::before{opacity:.82}
+.button,.nav-cta{position:relative;overflow:hidden;isolation:isolate;transition:transform .3s ease,box-shadow .35s ease,filter .35s ease}
+.button::after,.nav-cta::after{content:"";position:absolute;inset:-40% auto -40% -65%;width:38%;transform:skewX(-22deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transition:left .65s ease;z-index:-1}
+.button:hover::after,.nav-cta:hover::after{left:135%}
+.button:hover,.nav-cta:hover{filter:brightness(1.1);box-shadow:0 12px 34px rgba(133,45,219,.32)}
+.social-icon{transition:transform .4s ease,box-shadow .4s ease}
+.social-card:hover .social-icon{transform:rotate(-8deg) scale(1.08);box-shadow:0 0 22px rgba(168,92,255,.25)}
+.section-head .eyebrow:before{box-shadow:0 0 12px rgba(168,92,255,.8)}
+.hero-photo{animation:cinemaPhotoIn 1.2s ease both}
+@keyframes cinemaPhotoIn{from{opacity:.72;filter:brightness(.72) saturate(.82);transform:scale(1.018)}to{opacity:1;filter:brightness(1) saturate(1);transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){body::before,.topline,.hero:before,.page-hero:before,.hero-photo{animation:none!important}.service-card,.page-card,.content-panel,.step,.social-card,.contact-item,.location-panel,.button,.nav-cta{transition:none!important}}
+
   </style>
 </head>
 <body>
