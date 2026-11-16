@@ -104,14 +104,3 @@
     .page-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
     @media(max-width:560px){.page-grid,.contact-grid{grid-template-columns:1fr}.page-hero{padding:55px 0 42px}}
 
-
-/* Navegação em abas visíveis também no celular */
-
-    @media(max-width:800px){
-      .nav{height:auto;min-height:70px;flex-wrap:wrap;row-gap:0;padding-top:10px}
-      .nav-links{display:flex!important;position:static;order:3;flex:0 0 100%;width:100%;padding:10px 0 12px;margin:0;background:transparent;border:0;border-bottom:0;flex-direction:row;align-items:center;justify-content:space-between;gap:20px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
-      .nav-links::-webkit-scrollbar{display:none}
-      .nav-links a{padding:4px 0;flex:0 0 auto;font-size:11px}
-      .menu-toggle{display:none!important}
-      .nav-cta{display:none!important}
-    }
